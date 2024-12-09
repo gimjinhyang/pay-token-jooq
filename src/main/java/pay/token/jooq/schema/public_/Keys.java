@@ -10,7 +10,13 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.Internal;
 
 import pay.token.jooq.schema.public_.tables.Author;
+import pay.token.jooq.schema.public_.tables.Card;
+import pay.token.jooq.schema.public_.tables.Token;
+import pay.token.jooq.schema.public_.tables.TokenApproval;
 import pay.token.jooq.schema.public_.tables.records.AuthorRecord;
+import pay.token.jooq.schema.public_.tables.records.CardRecord;
+import pay.token.jooq.schema.public_.tables.records.TokenApprovalRecord;
+import pay.token.jooq.schema.public_.tables.records.TokenRecord;
 
 
 /**
@@ -25,4 +31,7 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<AuthorRecord> CONSTRAINT_7 = Internal.createUniqueKey(Author.AUTHOR, DSL.name("CONSTRAINT_7"), new TableField[] { Author.AUTHOR.ID }, true);
+    public static final UniqueKey<CardRecord> CONSTRAINT_1 = Internal.createUniqueKey(Card.CARD, DSL.name("CONSTRAINT_1"), new TableField[] { Card.CARD.CARD_REF_ID }, true);
+    public static final UniqueKey<TokenRecord> CONSTRAINT_4 = Internal.createUniqueKey(Token.TOKEN, DSL.name("CONSTRAINT_4"), new TableField[] { Token.TOKEN.TOKEN_ID }, true);
+    public static final UniqueKey<TokenApprovalRecord> CONSTRAINT_2 = Internal.createUniqueKey(TokenApproval.TOKEN_APPROVAL, DSL.name("CONSTRAINT_2"), new TableField[] { TokenApproval.TOKEN_APPROVAL.TOKEN_APPROVAL_ID }, true);
 }

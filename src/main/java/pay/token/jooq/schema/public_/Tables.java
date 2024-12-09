@@ -5,6 +5,9 @@ package pay.token.jooq.schema.public_;
 
 
 import pay.token.jooq.schema.public_.tables.Author;
+import pay.token.jooq.schema.public_.tables.Card;
+import pay.token.jooq.schema.public_.tables.Token;
+import pay.token.jooq.schema.public_.tables.TokenApproval;
 
 
 /**
@@ -17,4 +20,19 @@ public class Tables {
      * The table <code>PUBLIC.AUTHOR</code>.
      */
     public static final Author AUTHOR = Author.AUTHOR;
+
+    /**
+     * The table <code>PUBLIC.CARD</code>.
+     */
+    public static final Card CARD = Card.CARD;
+
+    /**
+     * The table <code>PUBLIC.TOKEN</code>.
+     */
+    public static final Token TOKEN = Token.TOKEN;
+
+    /**
+     * The table <code>PUBLIC.TOKEN_APPROVAL</code>.
+     */
+    public static final TokenApproval TOKEN_APPROVAL = TokenApproval.TOKEN_APPROVAL;
 }

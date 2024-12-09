@@ -45,8 +45,8 @@ jooq {
                     }
                     database.apply {
                         name = "org.jooq.meta.h2.H2Database"
-                        includes = "AUTHOR"
-                        excludes = ""
+                        includes = ".*"
+                        excludes = "INFORMATION_SCHEMA.*"
                     }
                     target.apply {
                         packageName = "pay.token.jooq.schema"

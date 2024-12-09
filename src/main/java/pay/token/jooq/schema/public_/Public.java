@@ -13,6 +13,9 @@ import org.jooq.impl.SchemaImpl;
 
 import pay.token.jooq.schema.DefaultCatalog;
 import pay.token.jooq.schema.public_.tables.Author;
+import pay.token.jooq.schema.public_.tables.Card;
+import pay.token.jooq.schema.public_.tables.Token;
+import pay.token.jooq.schema.public_.tables.TokenApproval;
 
 
 /**
@@ -34,6 +37,21 @@ public class Public extends SchemaImpl {
     public final Author AUTHOR = Author.AUTHOR;
 
     /**
+     * The table <code>PUBLIC.CARD</code>.
+     */
+    public final Card CARD = Card.CARD;
+
+    /**
+     * The table <code>PUBLIC.TOKEN</code>.
+     */
+    public final Token TOKEN = Token.TOKEN;
+
+    /**
+     * The table <code>PUBLIC.TOKEN_APPROVAL</code>.
+     */
+    public final TokenApproval TOKEN_APPROVAL = TokenApproval.TOKEN_APPROVAL;
+
+    /**
      * No further instances allowed
      */
     private Public() {
@@ -49,7 +67,10 @@ public class Public extends SchemaImpl {
     @Override
     public final List<Table<?>> getTables() {
         return Arrays.asList(
-            Author.AUTHOR
+            Author.AUTHOR,
+            Card.CARD,
+            Token.TOKEN,
+            TokenApproval.TOKEN_APPROVAL
         );
     }
 }
