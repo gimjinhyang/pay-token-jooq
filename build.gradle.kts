@@ -64,5 +64,5 @@ tasks.withType<Test> {
 
 tasks.named("generateJooq").configure {
     // disable auto generation jooq
-//    enabled = false
+    enabled = false
 }
