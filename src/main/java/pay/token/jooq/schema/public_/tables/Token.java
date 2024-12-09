@@ -5,7 +5,6 @@ package pay.token.jooq.schema.public_.tables;
 
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.Collection;
 
 import org.jooq.Condition;
@@ -70,7 +69,7 @@ public class Token extends TableImpl<TokenRecord> {
     /**
      * The column <code>PUBLIC.TOKEN.TOKEN_EXPIRE</code>.
      */
-    public final TableField<TokenRecord, LocalTime> TOKEN_EXPIRE = createField(DSL.name("TOKEN_EXPIRE"), SQLDataType.LOCALTIME.nullable(false), this, "");
+    public final TableField<TokenRecord, LocalDateTime> TOKEN_EXPIRE = createField(DSL.name("TOKEN_EXPIRE"), SQLDataType.LOCALDATETIME(6).nullable(false), this, "");
 
     /**
      * The column <code>PUBLIC.TOKEN.CREATED_TIME</code>.

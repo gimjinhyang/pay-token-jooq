@@ -5,7 +5,6 @@ package pay.token.jooq.schema.public_.tables.records;
 
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 import org.jooq.Record1;
 import org.jooq.impl.UpdatableRecordImpl;
@@ -66,15 +65,15 @@ public class TokenRecord extends UpdatableRecordImpl<TokenRecord> {
     /**
      * Setter for <code>PUBLIC.TOKEN.TOKEN_EXPIRE</code>.
      */
-    public void setTokenExpire(LocalTime value) {
+    public void setTokenExpire(LocalDateTime value) {
         set(3, value);
     }
 
     /**
      * Getter for <code>PUBLIC.TOKEN.TOKEN_EXPIRE</code>.
      */
-    public LocalTime getTokenExpire() {
-        return (LocalTime) get(3);
+    public LocalDateTime getTokenExpire() {
+        return (LocalDateTime) get(3);
     }
 
     /**
@@ -114,7 +113,7 @@ public class TokenRecord extends UpdatableRecordImpl<TokenRecord> {
     /**
      * Create a detached, initialised TokenRecord
      */
-    public TokenRecord(Long tokenId, Long cardRefId, String tokenText, LocalTime tokenExpire, LocalDateTime createdTime) {
+    public TokenRecord(Long tokenId, Long cardRefId, String tokenText, LocalDateTime tokenExpire, LocalDateTime createdTime) {
         super(Token.TOKEN);
 
         setTokenId(tokenId);
