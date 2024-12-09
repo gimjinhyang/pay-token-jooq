@@ -72,6 +72,11 @@ public class Token extends TableImpl<TokenRecord> {
     public final TableField<TokenRecord, LocalDateTime> TOKEN_EXPIRE = createField(DSL.name("TOKEN_EXPIRE"), SQLDataType.LOCALDATETIME(6).nullable(false), this, "");
 
     /**
+     * The column <code>PUBLIC.TOKEN.TOKEN_STATUS_CODE</code>.
+     */
+    public final TableField<TokenRecord, String> TOKEN_STATUS_CODE = createField(DSL.name("TOKEN_STATUS_CODE"), SQLDataType.VARCHAR(16).nullable(false), this, "");
+
+    /**
      * The column <code>PUBLIC.TOKEN.CREATED_TIME</code>.
      */
     public final TableField<TokenRecord, LocalDateTime> CREATED_TIME = createField(DSL.name("CREATED_TIME"), SQLDataType.LOCALDATETIME(6).nullable(false), this, "");

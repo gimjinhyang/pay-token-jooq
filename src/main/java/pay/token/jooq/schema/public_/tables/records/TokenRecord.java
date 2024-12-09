@@ -77,17 +77,31 @@ public class TokenRecord extends UpdatableRecordImpl<TokenRecord> {
     }
 
     /**
+     * Setter for <code>PUBLIC.TOKEN.TOKEN_STATUS_CODE</code>.
+     */
+    public void setTokenStatusCode(String value) {
+        set(4, value);
+    }
+
+    /**
+     * Getter for <code>PUBLIC.TOKEN.TOKEN_STATUS_CODE</code>.
+     */
+    public String getTokenStatusCode() {
+        return (String) get(4);
+    }
+
+    /**
      * Setter for <code>PUBLIC.TOKEN.CREATED_TIME</code>.
      */
     public void setCreatedTime(LocalDateTime value) {
-        set(4, value);
+        set(5, value);
     }
 
     /**
      * Getter for <code>PUBLIC.TOKEN.CREATED_TIME</code>.
      */
     public LocalDateTime getCreatedTime() {
-        return (LocalDateTime) get(4);
+        return (LocalDateTime) get(5);
     }
 
     // -------------------------------------------------------------------------
@@ -113,13 +127,14 @@ public class TokenRecord extends UpdatableRecordImpl<TokenRecord> {
     /**
      * Create a detached, initialised TokenRecord
      */
-    public TokenRecord(Long tokenId, Long cardRefId, String tokenText, LocalDateTime tokenExpire, LocalDateTime createdTime) {
+    public TokenRecord(Long tokenId, Long cardRefId, String tokenText, LocalDateTime tokenExpire, String tokenStatusCode, LocalDateTime createdTime) {
         super(Token.TOKEN);
 
         setTokenId(tokenId);
         setCardRefId(cardRefId);
         setTokenText(tokenText);
         setTokenExpire(tokenExpire);
+        setTokenStatusCode(tokenStatusCode);
         setCreatedTime(createdTime);
         resetChangedOnNotNull();
     }

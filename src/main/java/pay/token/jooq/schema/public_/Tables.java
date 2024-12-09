@@ -7,7 +7,7 @@ package pay.token.jooq.schema.public_;
 import pay.token.jooq.schema.public_.tables.Author;
 import pay.token.jooq.schema.public_.tables.Card;
 import pay.token.jooq.schema.public_.tables.Token;
-import pay.token.jooq.schema.public_.tables.TokenApproval;
+import pay.token.jooq.schema.public_.tables.TokenStatus;
 
 
 /**
@@ -32,7 +32,7 @@ public class Tables {
     public static final Token TOKEN = Token.TOKEN;
 
     /**
-     * The table <code>PUBLIC.TOKEN_APPROVAL</code>.
+     * The table <code>PUBLIC.TOKEN_STATUS</code>.
      */
-    public static final TokenApproval TOKEN_APPROVAL = TokenApproval.TOKEN_APPROVAL;
+    public static final TokenStatus TOKEN_STATUS = TokenStatus.TOKEN_STATUS;
 }

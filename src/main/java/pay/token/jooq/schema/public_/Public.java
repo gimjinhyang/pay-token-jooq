@@ -15,7 +15,7 @@ import pay.token.jooq.schema.DefaultCatalog;
 import pay.token.jooq.schema.public_.tables.Author;
 import pay.token.jooq.schema.public_.tables.Card;
 import pay.token.jooq.schema.public_.tables.Token;
-import pay.token.jooq.schema.public_.tables.TokenApproval;
+import pay.token.jooq.schema.public_.tables.TokenStatus;
 
 
 /**
@@ -47,9 +47,9 @@ public class Public extends SchemaImpl {
     public final Token TOKEN = Token.TOKEN;
 
     /**
-     * The table <code>PUBLIC.TOKEN_APPROVAL</code>.
+     * The table <code>PUBLIC.TOKEN_STATUS</code>.
      */
-    public final TokenApproval TOKEN_APPROVAL = TokenApproval.TOKEN_APPROVAL;
+    public final TokenStatus TOKEN_STATUS = TokenStatus.TOKEN_STATUS;
 
     /**
      * No further instances allowed
@@ -70,7 +70,7 @@ public class Public extends SchemaImpl {
             Author.AUTHOR,
             Card.CARD,
             Token.TOKEN,
-            TokenApproval.TOKEN_APPROVAL
+            TokenStatus.TOKEN_STATUS
         );
     }
 }
