@@ -52,9 +52,9 @@ public class TokenStatus extends TableImpl<TokenStatusRecord> {
     }
 
     /**
-     * The column <code>PUBLIC.TOKEN_STATUS.TOKEN_HISTORY_ID</code>.
+     * The column <code>PUBLIC.TOKEN_STATUS.TOKEN_STATUS_ID</code>.
      */
-    public final TableField<TokenStatusRecord, Long> TOKEN_HISTORY_ID = createField(DSL.name("TOKEN_HISTORY_ID"), SQLDataType.BIGINT.nullable(false).identity(true), this, "");
+    public final TableField<TokenStatusRecord, Long> TOKEN_STATUS_ID = createField(DSL.name("TOKEN_STATUS_ID"), SQLDataType.BIGINT.nullable(false).identity(true), this, "");
 
     /**
      * The column <code>PUBLIC.TOKEN_STATUS.TOKEN_ID</code>.

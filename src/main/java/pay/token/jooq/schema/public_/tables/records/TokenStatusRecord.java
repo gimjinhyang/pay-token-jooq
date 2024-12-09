@@ -21,16 +21,16 @@ public class TokenStatusRecord extends UpdatableRecordImpl<TokenStatusRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>PUBLIC.TOKEN_STATUS.TOKEN_HISTORY_ID</code>.
+     * Setter for <code>PUBLIC.TOKEN_STATUS.TOKEN_STATUS_ID</code>.
      */
-    public void setTokenHistoryId(Long value) {
+    public void setTokenStatusId(Long value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>PUBLIC.TOKEN_STATUS.TOKEN_HISTORY_ID</code>.
+     * Getter for <code>PUBLIC.TOKEN_STATUS.TOKEN_STATUS_ID</code>.
      */
-    public Long getTokenHistoryId() {
+    public Long getTokenStatusId() {
         return (Long) get(0);
     }
 
@@ -99,10 +99,10 @@ public class TokenStatusRecord extends UpdatableRecordImpl<TokenStatusRecord> {
     /**
      * Create a detached, initialised TokenStatusRecord
      */
-    public TokenStatusRecord(Long tokenHistoryId, Long tokenId, String tokenStatusCode, LocalDateTime createdTime) {
+    public TokenStatusRecord(Long tokenStatusId, Long tokenId, String tokenStatusCode, LocalDateTime createdTime) {
         super(TokenStatus.TOKEN_STATUS);
 
-        setTokenHistoryId(tokenHistoryId);
+        setTokenStatusId(tokenStatusId);
         setTokenId(tokenId);
         setTokenStatusCode(tokenStatusCode);
         setCreatedTime(createdTime);
