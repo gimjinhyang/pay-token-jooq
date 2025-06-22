@@ -62,6 +62,14 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
 tasks.named("generateJooq").configure {
     // disable auto generation jooq
     enabled = false
