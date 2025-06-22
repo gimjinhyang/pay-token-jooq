@@ -65,11 +65,12 @@ tasks.withType<Test> {
 }
 
 tasks.named<BootJar>("bootJar") {
-    enabled = true
+    enabled = false
 }
 
 tasks.named<Jar>("jar") {
-    enabled = false
+    enabled = true
+    archiveClassifier = ""
 }
 
 tasks.named("generateJooq").configure {
