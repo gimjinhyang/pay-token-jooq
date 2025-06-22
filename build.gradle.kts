@@ -5,6 +5,7 @@ plugins {
     id("org.springframework.boot") version "3.4.0"
     id("io.spring.dependency-management") version "1.1.6"
     id("nu.studer.jooq") version "9.0"
+    `maven-publish`
 }
 
 group = "pay.token"
@@ -59,6 +60,26 @@ jooq {
         }
     }
 }
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "pay.token"
+            artifactId = "pay-token-jooq"
+            version = "0.0.1"
+            from(components["java"])
+        }
+    }
+}
+
+//publishing {
+//    publications {
+//        register("mavenJava", MavenPublication::class) {
+//            from(components["java"])
+//        }
+//    }
+//}
 
 tasks.withType<Test> {
     useJUnitPlatform()
