@@ -64,11 +64,11 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-tasks.named("bootJar").configure {
+tasks.named<BootJar>("bootJar") {
     enabled = false
 }
 
-tasks.named("jar").configure {
+tasks.named<Jar>("jar") {
     enabled = true
 }
 
